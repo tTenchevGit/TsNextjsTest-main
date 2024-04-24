@@ -17,12 +17,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".", // Set the base directory for module resolution
+    "paths": {
+      "styled-components": ["node_modules/styled-components"],
+      "~/components": ["./components"],
+      "~/*": ["*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "collections/Card/elements.tsx",
+    "collections/Card/Card.tsx",
+    "sections/AgencySelection/AgencySelection.tsx",
+    "sections/AgencySelection/elements.tsx"
   ],
   "exclude": [
     "node_modules"
