@@ -1,6 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import StyledContainer from "./elements";
+import {
+  StyledContainer,
+  StyledTitleBold,
+  StyledDescriptionSmall,
+  StyledTextContainer,
+  StyledImageContainer,
+} from "./elements";
 
 interface CardComponentProps {
   image: {
@@ -21,16 +27,20 @@ const CardComponent: React.FC<CardComponentProps> = ({
 }) => {
   return (
     <StyledContainer {...props}>
-      <Image
-        src={image.src}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
-      />
-      <div>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </div>
+      <StyledImageContainer>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      </StyledImageContainer>
+      <StyledTextContainer>
+        <StyledTitleBold>
+        {title}
+        </StyledTitleBold>
+        <StyledDescriptionSmall>{description}</StyledDescriptionSmall>
+      </StyledTextContainer>
     </StyledContainer>
   );
 };

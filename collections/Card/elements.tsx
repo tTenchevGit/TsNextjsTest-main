@@ -1,20 +1,49 @@
-import React from "react";
-import styled, { StyledComponent } from "styled-components";
-import { SectionContainer } from "~/components";
+import styled from "styled-components";
+import { SectionContainer, SectionBigHeading, SectionSubheading } from "~/components";
 
 interface StyledContainerProps {
   height?: string;
 }
 
-// Define StyledContainer with the correct type annotations
-const StyledContainer: StyledComponent<
-  typeof SectionContainer,
-  any, 
-  StyledContainerProps 
-> = styled(({ height, ...props }: StyledContainerProps) => (
-  <SectionContainer {...props} />
-))<StyledContainerProps>`
-  /* Add your styles here */
+interface StyledTitleBoldProps {
+  titleStyleProps?: string;
+}
+
+interface AgencySelectionProps {
+  image: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  title: string;
+  description: string | JSX.Element; // Ensure description matches the expected type
+}
+
+export const StyledContainer = styled(SectionContainer)<StyledContainerProps>`
+  align-items: center;
+  margin-bottom: 30px;
+  background: #EEEEEE;
+  width: 100%;
 `;
 
-export default StyledContainer;
+export const StyledTitleBold = styled(SectionBigHeading)<StyledTitleBoldProps>`
+  margin: 0;
+  color: black;
+  font-size: 24px;
+  ${({ titleStyleProps }) => titleStyleProps}
+`;
+
+export const StyledDescriptionSmall = styled(SectionSubheading)`
+  margin: 0;
+`;
+
+export const StyledTextContainer = styled.div`
+  color: black;
+  width: 100%;
+  font-family: sans-serif;
+`;
+
+export const StyledImageContainer = styled.div`
+  margin: 20px 25px;
+`;

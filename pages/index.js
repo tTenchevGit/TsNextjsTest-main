@@ -11,7 +11,12 @@ const Home = () => {
 
   return (
     <div>
-      <AgencySelection image={image} title={title} description={description} />
+      <AgencySelection
+        image={image}
+        title={title}
+        description={description}
+        isHomePage={true}
+      />
     </div>
   );
 };

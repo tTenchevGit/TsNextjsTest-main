@@ -12,6 +12,7 @@ a {
 }
 
 * {
+  color: #b8b8b8;
   box-sizing: border-box;
 }
 
@@ -27,4 +28,8 @@ p {
   margin: 0;
   padding: 0;
   line-height: 1;
+} 
+
+strong {
+  font-weight: bold;
 }
