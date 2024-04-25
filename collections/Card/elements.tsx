@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { SectionContainer, SectionBigHeading, SectionSubheading } from "~/components";
+import { SectionContainer } from "~/components";
+import { SectionSubheading } from "~/components/Typography/SectionSubheading";
+import { SectionBigHeading } from "~/components/Typography";
 
 interface StyledContainerProps {
   height?: string;

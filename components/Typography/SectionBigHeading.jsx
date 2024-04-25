@@ -1,3 +1,4 @@
+
 import { StyledSectionBigHeading } from "./elements";
 
 export const SectionBigHeading = ({ ...props }) => {

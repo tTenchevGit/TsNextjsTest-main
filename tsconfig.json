@@ -33,7 +33,7 @@
     "collections/Card/Card.tsx",
     "sections/AgencySelection/AgencySelection.tsx",
     "sections/AgencySelection/elements.tsx"
-  ],
+, "components/Typography/SectionBigHeading.jsx", "components/Typography/index.ts", "components/Typography/SectionHeading.jsx", "components/Typography/SectionSubheading.jsx"  ],
   "exclude": [
     "node_modules"
   ]
